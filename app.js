@@ -44,9 +44,9 @@ const io = socketIO(server, {
     origin: ENV_CONF.CORS_ORIGIN,
     methods: ["GET", "POST"],
     credentials: true,
-    transports: ["websocket", "polling"],
+//     transports: ["websocket", "polling"],
   },
-  allowEIO3: true,
+//   allowEIO3: true,
 });
 
 require("./sockets")(io);
