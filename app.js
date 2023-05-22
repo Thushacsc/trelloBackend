@@ -39,16 +39,16 @@ app.use((req, res) => {
 app.use(errorMiddleware);
 
 // WEB-SOCKETS
-const io = socketIO(server, {
-  cors: {
-    origin: ENV_CONF.CORS_ORIGIN,
-    methods: ["GET", "POST"],
-    credentials: true,
-    transports: ["websocket", "polling"],
-  },
-  allowEIO3: true,
-});
+// const io = socketIO(server, {
+//   cors: {
+//     origin: ENV_CONF.CORS_ORIGIN,
+//     methods: ["GET", "POST"],
+//     credentials: true,
+//     transports: ["websocket", "polling"],
+//   },
+//   allowEIO3: true,
+// });
 
-require("./sockets")(io);
+// require("./sockets")(io);
 
 module.exports = server;
