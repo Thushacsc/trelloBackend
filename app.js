@@ -46,7 +46,7 @@ const io = socketIO(server, {
 //     credentials: true,
     transports: ["websocket", "polling"],
   },
-  allowEIO3: true,
+//   allowEIO3: true,
 });
 
 require("./sockets")(io);
