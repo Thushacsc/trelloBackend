@@ -14,6 +14,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors({ credentials: true, origin: ENV_CONF.CORS_ORIGIN }));
 
+
+console.log(ENV_CONF.NODE_ENV)
 if (ENV_CONF.NODE_ENV === "development") {
   app.use(logger("dev"));
   app.use(errorHandler());
