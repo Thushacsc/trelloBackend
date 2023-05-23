@@ -41,7 +41,7 @@ app.use(errorMiddleware);
 // WEB-SOCKETS
 const io = socketIO(server, {
   cors: {
-    origin: ENV_CONF.CORS_ORIGIN,
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
     transports: ["websocket", "polling"],
