@@ -43,7 +43,7 @@ const io = socketIO(server, {
   cors: {
     origin: "*",
     methods: ["GET", "POST"],
-    credentials: true,
+//     credentials: true,
     transports: ["websocket", "polling"],
   },
   allowEIO3: true,
