@@ -4,7 +4,7 @@ const http = require("http");
 const logger = require("morgan");
 const errorHandler = require("errorhandler");
 const cors = require("cors");
-const socketIO = require("socket.io");
+const socketIO = require("socket.io")(server, {cors: { origin: "*"}});
 
 const app = express();
 const server = http.createServer(app);
