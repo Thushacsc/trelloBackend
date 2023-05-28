@@ -27,6 +27,7 @@ if (ENV_CONF.NODE_ENV === "development") {
 require("./routes/")(app);
 
 if (ENV_CONF.NODE_ENV === "production") {
+  console.log("__dirname:", __dirname);
   app.use(express.static(__dirname + "/public/"));
   app.get("*", (_, res) => res.sendFile(__dirname + "/public/index.html"));
 }
